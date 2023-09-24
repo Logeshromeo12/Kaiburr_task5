@@ -17,6 +17,10 @@ jobs:
         uses: actions/setup-java@v2
         with:
           java-version: '11'
+          distribution: 'temurin'
+          server-id: github
+          settings-path: ${{ github.workspace }}
+          cache: maven
 
       - name: Setup Maven
         uses: stCarolas/setup-maven@v.4.5
